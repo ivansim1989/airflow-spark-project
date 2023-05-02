@@ -35,8 +35,7 @@ with DAG("process_csv", start_date=datetime(2023, 5, 1), schedule_interval=timed
         task_id="process_csv",
         application="/opt/airflow/dags/scripts/process_csv.py",
         conn_id="spark_conn",
-        application_args=["applications_dataset_1.csv", "applications_dataset_2.csv"]
-,
+        application_args=["applications_dataset_1.csv", "applications_dataset_2.csv"],
         verbose= False
     )
 
